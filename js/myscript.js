@@ -56,6 +56,14 @@ var app = new Vue({
         remuveList: function(i){
             
             this.objects.splice(i, 1);
+        },
+        checked: function(i){
+            if(this.objects[i].done == true){
+                console.log(this.objects[i].done);
+            }else{
+                console.log('ciaone');
+            }
+            
         }
             
     }

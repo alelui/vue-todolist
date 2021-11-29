@@ -29,18 +29,22 @@
         <main>
             <div class="container">
 
-                <input type="text" placeholder="New list name" v-model="newObject.text" >
+                <input type="text" placeholder="New list name" v-model="newObject.text" @keyup.enter="addList()">
 
                 <button @click="addList()">Add</button>
 
                 <div class="list-box">
+
                     <ol v-if="objects.length > 0"> 
                         <li v-for="(object, index) in objects" >
-                            <span>{{object.text}}</span>
+                            <span :class="objects[index].done == true ? 'line-through' : '' ">{{object.text}}</span>
+                            <input type="checkbox" name="check" v-model="objects[index].done" @click="checked(index)" >
                             <i class="fas fa-times" @click="remuveList(index)"></i>
                         </li>
                     </ol>
+
                     <h2 v-else >There is no List inside, please insert one.</h2>
+
                 </div>
             </div>
         </main>
