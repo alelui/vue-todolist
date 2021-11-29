@@ -46,13 +46,17 @@ var app = new Vue({
 
     methods: {
         addList: function() {
-
-            console.log(this.newObject.text);
-
-            this.objects.push(this.newObject);
-
-            this.newObject = {text: '',done: false};
+            if (!this.newObject.text == 0){
+                this.objects.push(this.newObject);
+                this.newObject = {text: '',done: false};
+            }else{
+                alert('inserire un nome valido');
+            }
         },
+        remuveList: function(i){
+            
+            this.objects.splice(i, 1);
+        }
             
     }
   })

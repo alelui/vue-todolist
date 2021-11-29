@@ -79,6 +79,10 @@ header h1{
     border-bottom: 1px solid black;
 }
 
+.list-box i{
+    cursor: pointer;
+}
+
 /* *** FOOTER *** */
 
 /* *** DEBUG *** */

@@ -34,12 +34,13 @@
                 <button @click="addList()">Add</button>
 
                 <div class="list-box">
-                    <ol> 
-                        <li v-for="object in objects" >
+                    <ol v-if="objects.length > 0"> 
+                        <li v-for="(object, index) in objects" >
                             <span>{{object.text}}</span>
-                            <i class="fas fa-times"></i>
+                            <i class="fas fa-times" @click="remuveList(index)"></i>
                         </li>
                     </ol>
+                    <h2 v-else >There is no List inside, please insert one.</h2>
                 </div>
             </div>
         </main>
