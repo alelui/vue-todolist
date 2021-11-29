@@ -37,19 +37,22 @@ var app = new Vue({
             },
         ],
 
-        inputValue :
+        newObject :
             {
-                text:"",
+                text:'',
                 done: false,
             },
     },
 
     methods: {
         addList: function() {
-            console.log(this.inputValue.text);
-            this.objects.push(this.inputValue);
-            this.inputValue.text = '';
-            console.log(this.objects);
-        }
+
+            console.log(this.newObject.text);
+
+            this.objects.push(this.newObject);
+
+            this.newObject = {text: '',done: false};
+        },
+            
     }
   })
