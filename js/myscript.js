@@ -23,18 +23,18 @@ var app = new Vue({
     el: '#root',
     data: {
         objects: [
-            {
-                text:'Comprare il pane',
-                done: false,
-            },
-            {
-                text:"Comprare il latte",
-                done: false,
-            },
-            {
-                text:"Radersi la barba",
-                done: false,
-            },
+            // {
+            //     text:'Comprare il pane',
+            //     done: false,
+            // },
+            // {
+            //     text:"Comprare il latte",
+            //     done: false,
+            // },
+            // {
+            //     text:"Radersi la barba",
+            //     done: false,
+            // },
         ],
 
         newObject :
@@ -42,6 +42,7 @@ var app = new Vue({
                 text:'',
                 done: false,
             },
+            
     },
 
     methods: {
@@ -50,21 +51,21 @@ var app = new Vue({
                 this.objects.push(this.newObject);
                 this.newObject = {text: '',done: false};
             }else{
-                alert('inserire un nome valido');
+                alert('insert a valid list name');
             }
         },
+
         remuveList: function(i){
-            
             this.objects.splice(i, 1);
         },
-        checked: function(i){
-            if(this.objects[i].done == true){
-                console.log(this.objects[i].done);
-            }else{
-                console.log('ciaone');
-            }
-            
-        }
+
+        // checked: function(i){
+        //     if(this.objects[i].done == true){
+        //         console.log(this.objects[i].done);
+        //     }else{
+        //         console.log('ciaone');
+        //     }
+        // }
             
     }
   })
