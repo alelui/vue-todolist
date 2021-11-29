@@ -59,13 +59,17 @@ var app = new Vue({
             this.objects.splice(i, 1);
         },
 
-        // checked: function(i){
-        //     if(this.objects[i].done == true){
-        //         console.log(this.objects[i].done);
-        //     }else{
-        //         console.log('ciaone');
-        //     }
-        // }
+        checked: function(i){
+            if(this.objects[i].done == true){
+                console.log('prima: ',this.objects[i].done);
+                this.objects[i].done = false;
+                console.log('dopo: ',this.objects[i].done);
+            }else{
+                console.log('prima: ',this.objects[i].done);
+                this.objects[i].done = true;
+                console.log('dopo: ',this.objects[i].done);
+            }
+        }
             
     }
   })

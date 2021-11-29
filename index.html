@@ -38,7 +38,7 @@
                     <ol v-if="objects.length > 0"> 
                         <li v-for="(object, index) in objects" >
                             <input type="checkbox" v-model="objects[index].done">
-                            <span :class="objects[index].done == true ? 'line-through' : '' ">{{object.text}}</span>
+                            <span @click="checked(index)" :class="objects[index].done == true ? 'line-through' : '' ">{{object.text}}</span>
                             <i class="fas fa-times" @click="remuveList(index)"></i>
                         </li>
                     </ol>
