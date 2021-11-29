@@ -45,6 +45,18 @@ header h1{
     border: none;
     border: 1px solid black;
 }
+.container button{
+    padding: 3px 10px;
+    background-color: chartreuse;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container button,
+.container input{
+    font-size: 20px;
+}
+
 .container .list-box{
     background-color: #eeeeee;
     padding: 10px;
@@ -52,11 +64,15 @@ header h1{
     padding: 20px;
     margin-top: 20px;
 }
-.list-box ol{
-    list-style: none;
+
+.list-box li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    list-style: none;
+    padding: 5px 0;
+}
+.list-box li:not(:last-child){
     border-bottom: 1px solid black;
 }
 
