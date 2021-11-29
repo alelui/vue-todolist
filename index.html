@@ -29,16 +29,16 @@
         <main>
             <div class="container">
 
-                <input type="text" placeholder="New list name" >
+                <input type="text" placeholder="New list name" v-model="inputValue.text" >
 
-                <button>Add</button>
+                <button @click="addList()">Add</button>
 
                 <div class="list-box">
                     <ol> 
-                        <li><span>Lista della spesa</span><i class="fas fa-times"></i></li>
-                        <li><span>Lista della spesa</span><i class="fas fa-times"></i></li>
-                        <li><span>Lista della spesa</span><i class="fas fa-times"></i></li>
-                        <li><span>Lista della spesa</span><i class="fas fa-times"></i></li>
+                        <li v-for="object in objects" >
+                            <span>{{object.text}}</span>
+                            <i class="fas fa-times"></i>
+                        </li>
                     </ol>
                 </div>
             </div>
