@@ -18,12 +18,7 @@
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
-
-var app = new Vue({
-    el: '#root',
-    data: {
-        objects: [
-            // {
+              // {
             //     text:'Comprare il pane',
             //     done: false,
             // },
@@ -32,17 +27,20 @@ var app = new Vue({
             //     done: false,
             // },
             // {
-            //     text:"Radersi la barba",
+            //     text:"cherveza",
             //     done: false,
             // },
-        ],
+
+var app = new Vue({
+    el: '#root',
+    data: {
+        objects: [],
 
         newObject :
             {
                 text:'',
                 done: false,
-            },
-            
+            }, 
     },
 
     methods: {
@@ -51,7 +49,7 @@ var app = new Vue({
                 this.objects.push(this.newObject);
                 this.newObject = {text: '',done: false};
             }else{
-                alert('insert a valid list name');
+                alert('EMPTY STRING! Please insert a valid name for the list.');
             }
         },
 
@@ -61,15 +59,17 @@ var app = new Vue({
 
         checked: function(i){
             if(this.objects[i].done == true){
-                console.log('prima: ',this.objects[i].done);
                 this.objects[i].done = false;
-                console.log('dopo: ',this.objects[i].done);
             }else{
-                console.log('prima: ',this.objects[i].done);
                 this.objects[i].done = true;
-                console.log('dopo: ',this.objects[i].done);
             }
         }
-            
+        
+        // addClass: function(i){
+        //     let x = this.objects[i].done;
+        //     return x;
+        // },
     }
   })
+
+

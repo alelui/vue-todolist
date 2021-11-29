@@ -20,35 +20,26 @@
     <div id="root">
 
         <header>
-            <div class="container">
-                <img src="https://www.boolean.careers/images/misc/logo.png" alt="logo">
-                <h1>To do List</h1>
-            </div>
+            <img src="https://www.boolean.careers/images/misc/logo.png" alt="logo">
+            <h1>To do List</h1>
         </header>
 
         <main>
-            <div class="container">
-
-                <input type="text" placeholder="New list name" v-model="newObject.text" @keyup.enter="addList()">
-
-                <button @click="addList()">Add</button>
-
-                <div class="list-box">
-
-                    <ol v-if="objects.length > 0"> 
-                        <li v-for="(object, index) in objects" >
-                            <input type="checkbox" v-model="objects[index].done">
-                            <span @click="checked(index)" :class="objects[index].done == true ? 'line-through' : '' ">{{object.text}}</span>
-                            <i class="fas fa-times" @click="remuveList(index)"></i>
-                        </li>
-                    </ol>
-
-                    <h2 v-else >You seem bored... put something to do in the to do list :)</h2>
-
-                </div>
+            <input type="text" placeholder="New list name" v-model="newObject.text" @keyup.enter="addList()">
+            <button @click="addList()">Press to add</button>
+            <div class="list-box">
+                <ol v-if="objects.length > 0"> 
+                    <li v-for="(object, index) in objects" >
+                        <input type="checkbox" v-model="objects[index].done">
+                        <span @click="checked(index)" :class="objects[index].done == true ? 'line-through' : '' ">{{object.text}}</span>
+                        <!-- <span @click="checked(index)" :class="{ line-through: isActive }"></div>>{{object.text}}</span> -->
+                        <i class="fas fa-times" @click="remuveList(index)"></i>
+                    </li>
+                </ol>
+                <h2 v-else >You look bored... Just put something to do in the to do list! :)</h2>
             </div>
         </main>
-
+        
     </div>
     
     <!-- development version, includes helpful console warnings --> 

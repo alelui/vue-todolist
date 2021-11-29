@@ -36,31 +36,33 @@ header h1{
 
 /* *** MAIN *** */
 
-.container{
+main{
     max-width: 1080px;
     margin: auto;
 }
 
-.container input {
+main input {
     border: none;
     border: 1px solid black;
     border-radius: 10px;
     padding: 3px;
 }
-.container button{
+main button{
     padding: 3px 10px;
     background-color: #00e165;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+
 }
-.container button,
-.container input{
+main button,
+main input{
     height: 40px;
     font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
-.container .list-box{
+main .list-box{
     background-color: #eeeeee;
     padding: 10px;
     border-radius: 10px;
@@ -78,7 +80,7 @@ header h1{
 .list-box li:not(:last-child){
     border-bottom: 1px solid black;
 }
-
+.list-box span,
 .list-box i{
     cursor: pointer;
 }
