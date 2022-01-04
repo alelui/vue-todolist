@@ -38,14 +38,14 @@ var app = new Vue({
 
         newObject :
             {
-                text:'',
+                text: null,
                 done: false,
             }, 
     },
 
     methods: {
         addList: function() {
-            if (!this.newObject.text == 0){
+            if (this.newObject.text != null){
                 this.objects.push(this.newObject);
                 this.newObject = {text: '',done: false};
             }else{

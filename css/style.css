@@ -15,7 +15,6 @@
 body{
     font-family: 'Outfit', sans-serif;
     text-align: center;
-
 }
 
 
@@ -50,6 +49,7 @@ main input {
 main button{
     padding: 3px 10px;
     background-color: #00e165;
+    /* background-color: #fe9900; */
     border: none;
     border-radius: 10px;
 
